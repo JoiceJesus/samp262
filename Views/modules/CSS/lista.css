@@ -1,0 +1,207 @@
+/* Variáveis de Estilo (Copiei do seu segundo código) */
+        :root {
+            --cor-principal: #007bff; /* Azul */
+            --cor-fundo: #f8f9fa; /* Fundo leve */
+            --cor-card: #ffffff; /* Fundo do painel */
+            --cor-borda: #dee2e6;
+            --cor-texto: #212529;
+            --cor-secundaria: #6c757d;
+            --cor-perigo: #dc3545; /* Vermelho para o botão "X" */
+        }
+ /* Estilos Globais e Reset */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 30px 20px; /* Adiciona padding para telas pequenas */
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        /* Estilo do Card Principal */
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 700px; /* Aumenta a largura para acomodar duas colunas */
+            overflow: hidden;
+        }
+
+        /* Estilo do Cabeçalho Azul */
+        .header-blue {
+            background-color: #007bff;
+            color: white;
+            padding: 30px 20px 20px;
+            text-align: center;
+        }
+
+        .header-blue h2 {
+            margin: 0 0 5px;
+            font-size: 24px;
+        }
+
+        .header-blue p {
+            margin: 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .icon-box {
+            font-size: 40px;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+
+        /* Estilos da Tabela */
+        .styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 15px;
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--cor-borda);
+        }
+
+        .styled-table th {
+            background-color: var(--cor-fundo);
+            font-weight: bold;
+            color: var(--cor-secundaria);
+            text-transform: uppercase;
+        }
+
+        .styled-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Estilo do link de Edição (Nome) */
+        .styled-table td a[href*="form"] {
+            color: var(--cor-principal);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .styled-table td a[href*="form"]:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo do Botão de Excluir ("X") */
+        .styled-table td a[href*="delete"] {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 25px;
+            height: 25px;
+            background-color: var(--cor-perigo);
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .styled-table td a[href*="delete"]:hover {
+            background-color: #a71d2a;
+        }
+
+        /* Estilo para a linha vazia (caso não haja dados) */
+        .no-data {
+            text-align: center;
+            color: var(--cor-secundaria);
+            padding: 20px;
+        }
+        /* ===========================
+   RESPONSIVIDADE GERAL
+=========================== */
+
+/* Evita quebra feia em telas médias */
+@media (max-width: 1024px) {
+    .card {
+        padding: 20px;
+    }
+
+    .styled-table {
+        font-size: 14px;
+    }
+}
+
+/* ===========================
+   TABLET E MOBILE – SCROLL
+=========================== */
+@media (max-width: 900px) {
+    .styled-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* ===========================
+   MOBILE – TABELA VIRA CARD
+=========================== */
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .title-section h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    /* Esconde cabeçalho */
+    .styled-table thead {
+        display: none;
+    }
+
+    .styled-table,
+    .styled-table tbody,
+    .styled-table tr,
+    .styled-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .styled-table tr {
+        margin-bottom: 15px;
+        border: 1px solid var(--cor-borda);
+        border-radius: 6px;
+        padding: 10px;
+        background-color: var(--cor-card);
+    }
+
+    .styled-table td {
+        text-align: left;
+        padding: 8px 10px;
+        border: none;
+        border-bottom: 1px solid var(--cor-borda);
+        position: relative;
+    }
+
+    .styled-table td:last-child {
+        border-bottom: none;
+    }
+
+    /* Botão excluir mais acessível no mobile */
+    .styled-table td a[href*="delete"] {
+        width: 100%;
+        height: auto;
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+}
+

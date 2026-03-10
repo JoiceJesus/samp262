@@ -1,0 +1,131 @@
+:root {
+    --cor-principal: #007bff;
+    --cor-fundo: #f0f2f5;
+    --cor-card: #ffffff;
+    --cor-borda: #dee2e6;
+    --cor-texto: #212529;
+    --cor-secundaria: #6c757d;
+    --cor-perigo: #dc3545;
+}
+
+/* ===========================
+   BODY
+=========================== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+}
+
+body.list-page {
+    padding: 30px 20px;
+}
+
+/* ===========================
+   CARD
+=========================== */
+.card {
+    background-color: var(--cor-card);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.card-list {
+    max-width: 1200px;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.header-blue {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 30px 20px 20px;
+    text-align: center;
+}
+
+.icon-box {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* ===========================
+   TABELA
+=========================== */
+.table-container {
+    overflow-x: auto;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--cor-borda);
+    text-align: left;
+}
+
+.styled-table th {
+    background-color: #f8f9fa;
+    color: var(--cor-secundaria);
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.styled-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* ===========================
+   LINKS E BOTÕES
+=========================== */
+.link-edit {
+    color: var(--cor-principal);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-edit:hover {
+    text-decoration: underline;
+}
+
+.btn-delete {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background-color: var(--cor-perigo);
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===========================
+   SEM DADOS
+=========================== */
+.no-data {
+    text-align: center;
+    padding: 20px;
+    color: var(--cor-secundaria);
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+@media (max-width: 600px) {
+    .card-body {
+        padding: 15px;
+    }
+}
